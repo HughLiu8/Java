@@ -6,6 +6,8 @@ public class Employee{
    int age;
    String designation;
    double salary;
+   
+   public static int nTest;
 	
    // This is the constructor of the class Employee
    public Employee(String name){
@@ -29,5 +31,21 @@ public class Employee{
       System.out.println("Age:" + age );
       System.out.println("Designation:" + designation );
       System.out.println("Salary:" + salary);
+	  System.out.println("nTest:" + nTest);
    }
+}
+
+class Super
+{
+	final int fn = 0;
+	
+	static public void Test()
+	{
+		int n = 3;
+	}
+}
+
+class sub extends Super
+{
+
 }
