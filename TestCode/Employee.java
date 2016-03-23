@@ -25,6 +25,14 @@ public class Employee{
    public void empSalary(double empSalary){
       salary = empSalary;
    }
+   public int hashCode() {
+        int hash = 1;
+        hash = hash * 17 + employeeId;
+        hash = hash * 31 + name.hashCode();
+        hash = hash * 13 + (dept == null ? 0 : dept.hashCode());
+        return hash;
+    }
+   
    /* Print the Employee details */
    public void printEmployee(){
       System.out.println("Name:"+ name );
@@ -32,6 +40,9 @@ public class Employee{
       System.out.println("Designation:" + designation );
       System.out.println("Salary:" + salary);
 	  System.out.println("nTest:" + nTest);
+	  
+	  String Str = new String("Welcome to Tutorialspoint.com");
+      System.out.println("Hashcode for Str :" + Str.hashCode() );
    }
 }
 
